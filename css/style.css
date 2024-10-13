@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-color);
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+:root {
+  --bg-color: #202124;
+  --text-color: #fff;
+  --a-color: #99c3ff;
+  --second-bg-color: #171717;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#autoInput {
+  background-color: transparent !important;
+  border: none;
+  color: white;
+}
+#autoInput:focus {
+  outline: none;
+}
+/* Header */
+.header {
+  width: 100%;
+  background-color: var(--bg-color);
+}
+.header__ul {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+  gap: 18px;
+  align-items: center;
+  padding: 15px 20px;
+}
+.header__li {
+  color: var(--text-color);
+  font-size: 14px;
+  cursor: pointer;
+}
+.header__li a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.header__li:hover a {
+  text-decoration: underline;
+}
+.header__li.profile__li img {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  outline: 3px solid var(--bg-color);
+
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.profile__li:hover img {
+  outline: 3px solid #4e5055;
+}
+
+.apps__li {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.apps__li:hover {
+  background-color: #333538;
+}
+/* Main */
+.main {
+  display: flex;
+  flex-direction: column;
+  /* height: calc(100vh - 74px); */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex: 2;
+}
+
+.searchBar {
+  min-width: 580px;
+  display: flex;
+  flex-direction: row-reverse;
+  max-height: 60px;
+  border: 1px solid #3e4146;
+  border-radius: 50px;
+  padding: 10px 15px;
+  align-items: center;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.searchBar:hover {
+  background: #303134;
+  border-color: #303134;
+  box-shadow: 1px 1px 10px #171717;
+}
+.searchBar .searchItem:not(:last-child) img {
+  width: 28px;
+  height: 28px;
+}
+.searchItems {
+  flex: 1;
+}
+#autoInput {
+  flex: 5;
+  padding: 5px;
+  font-size: 16px;
+}
+.searchItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.search {
+  width: 20px;
+  height: 20px;
+}
+.searchBar ul {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 20%;
+}
+.searchBar ul li {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.searchBar input {
+  width: 70%;
+  margin-right: 5px;
+}
+.main__buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 15px;
+}
+.main__button {
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #2e2f32;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border: 1px solid #2e2f32;
+}
+.main__button:hover {
+  border: 1px solid #4e5055;
+}
+.details {
+  font-size: 13px;
+  color: white;
+}
+.details a {
+  color: #99c3ff;
+}
+.details a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  color: var(--text-color);
+  font-size: 16px;
+}
+.country {
+  padding: 15px 25px;
+  background: var(--second-bg-color);
+}
+footer hr {
+  border: none;
+  height: 1px;
+  background-color: #4e5055;
+}
+.more {
+  padding: 15px 25px;
+  background: var(--second-bg-color);
+  display: flex;
+  justify-content: space-between;
+}
+.more li a,
+.center a {
+  color: white;
+}
+.more a:hover {
+  text-decoration: underline;
+}
+.more ul {
+  display: flex;
+  gap: 10px;
+}

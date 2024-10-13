@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" sizes="32x32" href="/assets/google.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <ul class="header__ul">
+        <li class="header__li profile__li">
+          <img src="/assets/profile.png" alt="Profile" />
+        </li>
+        <li class="header__li apps__li">
+          <img src="./assets/apps.svg" alt="apps" />
+        </li>
+        <li class="header__li"><a href="#">صور</a></li>
+        <li class="header__li"><a href="#">Gmail</a></li>
+      </ul>
+    </header>
+    <main class="main">
+      <div class="main__logo">
+        <img src="/assets/googleLogo.png" alt="Google" />
+      </div>
+      <div class="searchBar">
+        <ul class="searchItems">
+          <li class="searchItem">
+            <img src="/assets/googleLens.svg" alt="Lens" />
+          </li>
+          <li class="searchItem">
+            <img src="/assets/googleMIC.svg" alt="Google Mic" />
+          </li>
+          <li class="searchItem">
+            <img src="/assets/gogoleKeyboard.png" alt="keyboard" />
+          </li>
+        </ul>
+        <input type="text" placeholder="" id="autoInput" />
+        <img src="/assets/googleSearch.svg" alt="Search" class="search" />
+      </div>
+      <div class="main__buttons">
+        <button class="main__button">ضربة حظ</button>
+        <button class="main__button">بحث جوجل</button>
+      </div>
+      <p class="details">
+        محرك بحث Google متوفر باللغة : <a href="#">English</a>
+      </p>
+    </main>
+    <footer>
+      <div class="country">
+        <p>مصر</p>
+      </div>
+      <hr />
+      <div class="more">
+        <ul class="right">
+          <li><a href="#">لمحة</a></li>
+          <li><a href="#">الإعلانات</a></li>
+          <li><a href="#">الأعمال</a></li>
+          <li><a href="#">الية عمل "بحث Google"</a></li>
+        </ul>
+        <div class="center">
+          <a href="#">العقد الثالث من نشاطنا في مجال المناخ: تحقق من عملنا </a>
+        </div>
+        <ul class="left">
+          <li><a href="#">الخصوصية</a></li>
+          <li><a href="#">البنود</a></li>
+          <li><a href="#">الإعدادات</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script type="module" src="/js/main.js"></script>
+    <script>
+      const input = document.getElementById("autoInput");
+
+      function detectDirection(text) {
+        const rtlChars = /[\u0591-\u07FF\uFB1D-\uFDFD\uFE70-\uFEFC]/;
+        return rtlChars.test(text) ? "rtl" : "ltr";
+      }
+
+      input.addEventListener("input", function () {
+        const direction = detectDirection(this.value);
+        this.style.direction = direction;
+      });
+    </script>
+  </body>
+</html>
